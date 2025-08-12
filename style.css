@@ -11,25 +11,49 @@ html,body{
     width: 100%;
     font-family: "Roboto Condensed";
 }
+body::-webkit-scrollbar{
+    display: none;
+}
+
 main{
     height: 100vh;
     width: 100%;
-    background-color: black;
+    /* background-color: black; */
     position: relative;
+}
+#click{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: white;
+    padding: 0.5vmin 1vmin;
+    border: 0.5px solid white;
+    border-radius: 50px;
+    transform: all 0.5s linear;
 }
 
 #back{
     height: 100vh;
     width: 100%;
 }
+#back img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
 #top{
     height: 100vh;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
+    pointer-events: none;
     z-index: 10;
-    background-color: rgb(0, 0, 0);
+    /* background-color: rgb(0, 0, 0); */
 }
 
 #working-area{
@@ -63,6 +87,7 @@ nav a{
     font-size: 0.8rem;
     font-weight: 600;
     color: white;
+    pointer-events: all;
 }
 
 #hero{
@@ -93,15 +118,17 @@ nav a{
     font-size: 4.5vw;
     line-height: 1;
     font-family: "Oswald";
-    font-weight: 400;
+    font-weight: 500;
 }
 #hero-left button{
     font-family: "Oswald";
     padding: 0.5vmax 3vmax;
     background-color: white;
     color: black;
-    font-size: 2.5vmax;
+    font-size: 2vmax;
     margin-top: 2vmax;
+    border: none;
+    pointer-events: all;
 }
 
 #hero-right{
@@ -113,14 +140,15 @@ nav a{
     align-items: end;
     text-align: right;
     font-size: 0.9rem;
+    font-weight: 600;
 }
 
 #img-div{
-    background-image: url(https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    background-size:contain;
+    background-image: url(https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size:cover;
     background-position: center;
-    height: 20vh;
-    width: 20vh;
+    height: 25vh;
+    width: 35vh;
     margin: 5vh 0vmin;
 }
 
